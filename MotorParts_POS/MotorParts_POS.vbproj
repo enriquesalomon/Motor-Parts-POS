@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACA216B7-386A-4B16-8747-37FB8A39D4B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MotorParts_POS.My.MyApplication</StartupObject>
+    <RootNamespace>MotorParts_POS</RootNamespace>
+    <AssemblyName>MotorParts_POS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MotorParts_POS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MotorParts_POS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Iconshock-Global-Warming-Wheel.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Category.vb" />
+    <Compile Include="Class\InventoryItem.vb" />
+    <Compile Include="Class\Item.vb" />
+    <Compile Include="Class\Login.vb" />
+    <Compile Include="Class\SalesMonitoring.vb" />
+    <Compile Include="Class\StockAdjustment.vb" />
+    <Compile Include="Class\StockIn.vb" />
+    <Compile Include="Class\Transaction.vb" />
+    <Compile Include="Class\TransactionMonitoring.vb" />
+    <Compile Include="Class\UserAccount.vb" />
+    <Compile Include="FormReports\DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormReports\frmReport1.Designer.vb">
+      <DependentUpon>frmReport1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReports\frmReport1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdminMain.Designer.vb">
+      <DependentUpon>frmAdminMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAdminMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCatDetails.Designer.vb">
+      <DependentUpon>frmCatDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCatDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCategory.Designer.vb">
+      <DependentUpon>frmCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInventoryItem.Designer.vb">
+      <DependentUpon>frmInventoryItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInventoryItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSalesMonitoring.Designer.vb">
+      <DependentUpon>frmSalesMonitoring.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSalesMonitoring.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransactionsMonitoring.Designer.vb">
+      <DependentUpon>frmTransactionsMonitoring.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransactionsMonitoring.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmCashier.Designer.vb">
+      <DependentUpon>frmCashier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmCashier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDialogForm.Designer.vb">
+      <DependentUpon>frmDialogForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDialogForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmItemDetails.Designer.vb">
+      <DependentUpon>frmItemDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmItemDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmCashpay.Designer.vb">
+      <DependentUpon>frmCashpay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmCashpay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmConfirmAbort.Designer.vb">
+      <DependentUpon>frmConfirmAbort.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmConfirmAbort.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmDeleteItem.Designer.vb">
+      <DependentUpon>frmDeleteItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmDeleteItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmDiscount.Designer.vb">
+      <DependentUpon>frmDiscount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmDiscount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmItemLookup.Designer.vb">
+      <DependentUpon>frmItemLookup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmItemLookup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmItemNotFound.Designer.vb">
+      <DependentUpon>frmItemNotFound.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmItemNotFound.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmItem.Designer.vb">
+      <DependentUpon>frmItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStockAdjustDetail.Designer.vb">
+      <DependentUpon>frmStockAdjustDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStockAdjustDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStockAdjustQty.Designer.vb">
+      <DependentUpon>frmStockAdjustQty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStockAdjustQty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStockIn.Designer.vb">
+      <DependentUpon>frmStockIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStockIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStockList.Designer.vb">
+      <DependentUpon>frmStockList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStockList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUser.Designer.vb">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmNoStock.Designer.vb">
+      <DependentUpon>frmNoStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmNoStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmQTY.Designer.vb">
+      <DependentUpon>frmQTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmQTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmRestrictionKey.Designer.vb">
+      <DependentUpon>frmRestrictionKey.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmRestrictionKey.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction\frmTransactProcess.Designer.vb">
+      <DependentUpon>frmTransactProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction\frmTransactProcess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\generateReceipt.vb" />
+    <Compile Include="Module\GLobalVariable.vb" />
+    <Compile Include="Module\ModFunction.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormReports\frmReport1.resx">
+      <DependentUpon>frmReport1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdminMain.resx">
+      <DependentUpon>frmAdminMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCatDetails.resx">
+      <DependentUpon>frmCatDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCategory.resx">
+      <DependentUpon>frmCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInventoryItem.resx">
+      <DependentUpon>frmInventoryItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSalesMonitoring.resx">
+      <DependentUpon>frmSalesMonitoring.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransactionsMonitoring.resx">
+      <DependentUpon>frmTransactionsMonitoring.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmCashier.resx">
+      <DependentUpon>frmCashier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmItemDetails.resx">
+      <DependentUpon>frmItemDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmCashpay.resx">
+      <DependentUpon>frmCashpay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmConfirmAbort.resx">
+      <DependentUpon>frmConfirmAbort.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmDeleteItem.resx">
+      <DependentUpon>frmDeleteItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmDiscount.resx">
+      <DependentUpon>frmDiscount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmItemLookup.resx">
+      <DependentUpon>frmItemLookup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmItemNotFound.resx">
+      <DependentUpon>frmItemNotFound.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmItem.resx">
+      <DependentUpon>frmItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStockAdjustDetail.resx">
+      <DependentUpon>frmStockAdjustDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStockAdjustQty.resx">
+      <DependentUpon>frmStockAdjustQty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStockIn.resx">
+      <DependentUpon>frmStockIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStockList.resx">
+      <DependentUpon>frmStockList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUser.resx">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmNoStock.resx">
+      <DependentUpon>frmNoStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmQTY.resx">
+      <DependentUpon>frmQTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmRestrictionKey.resx">
+      <DependentUpon>frmRestrictionKey.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaction\frmTransactProcess.resx">
+      <DependentUpon>frmTransactProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FormReports\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FormReports\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="FormReports\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Iconshock-Global-Warming-Wheel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

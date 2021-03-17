@@ -1,0 +1,31 @@
+  Gonzaga Motor Parts and Accessories
+             Address
+    VAT REG TIN#: 999-999-9999
+           website.com
+=======================================
+OR#:                   00000000000002
+Date-Time:      1/13/2018 10:05:31 PM
+CashierID:                USER-100001
+Name:                       JUAN CRUZ
+=======================================
+------------OFFICIAL RECEIPT-----------
+   Qty      Description       Price   
+   1              1234        TIRESO
+---------------------------------------
+1 Item(s)
+TOTAL DUE                      750.00
+DISCOUNT AMNT                    0.00
+CASH                           800.00
+CHANGE                          50.00
+
+VATable Sales                     660
+VAT-Exmpt Sales                  0.00
+VAT Amount                       0.12
+
+---------------------------------------
+=======================================
+
+
+This Serves as an OFFICIAL RECEIPT
+    THANK YOU FOR SHOPPING!!!
+
